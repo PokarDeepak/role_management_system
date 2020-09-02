@@ -7,9 +7,11 @@
         <div class="pull-left">
             <h2>Users Management</h2>
         </div>
-        <div class="pull-right">
+        <div class="pull-right mb-3">
             <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
+            @if(count($data))
             <a href="{{ URL::to('downloadExcel/xls') }}"><button class="btn btn-success">Download Excel xls</button></a>
+            @endif
         </div>
     </div>
 </div>

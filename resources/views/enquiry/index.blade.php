@@ -7,10 +7,12 @@
             <div class="pull-left">
                 <h2>Enquiry</h2>
             </div>
-            <div class="pull-right">
+            <div class="pull-right mb-3">
                 @can('enquiry-create')
                 <a class="btn btn-success" href="{{ route('enquiries.create') }}"> Create New Enquiry</a>
+                @if(count($enquiries))
                 <a href="{{ URL::to('downloadEnquiry/xls') }}"><button class="btn btn-success">Download Excel xls</button></a>
+                @endif
                 @endcan
             </div>
         </div>
